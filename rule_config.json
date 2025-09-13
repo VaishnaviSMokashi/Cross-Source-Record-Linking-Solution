@@ -1,0 +1,48 @@
+{
+    "tiers": [
+        {
+            "name": "Exact Invoice ID Match",
+            "type": "exact",
+            "field_a": "invoice_id",
+            "field_b": "ref_code",
+            "active": true,
+            "weight": 1.0
+        },
+        {
+            "name": "Fuzzy Name Match",
+            "type": "fuzzy",
+            "field_a": "customer_name",
+            "field_b": "client",
+            "threshold": 90,
+            "active": true,
+            "weight": 0.8
+        },
+        {
+            "name": "Email Match",
+            "type": "exact",
+            "field_a": "customer_email",
+            "field_b": "email",
+            "active": true,
+            "weight": 0.9
+        },
+        {
+            "name": "Amount Match",
+            "type": "numeric",
+            "field_a": "total_amount",
+            "field_b": "grand_total",
+            "tolerance": 0.01,
+            "active": true,
+            "weight": 0.7
+        }
+    ],
+    "tie_breakers": [
+        {
+            "field": "invoice_date",
+            "direction": "latest"
+        },
+        {
+            "field": "invoice_date",
+            "direction": "latest"
+        }
+    ]
+}
