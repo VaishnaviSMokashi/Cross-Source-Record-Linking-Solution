@@ -4,7 +4,7 @@ import numpy as np
 from datetime import datetime
 import json
 import re
-from thefuzz import fuzz, process
+from rapidfuzz import fuzz, process
 from io import StringIO
 
 class RecordLinker:
@@ -438,4 +438,5 @@ def main():
         st.info("Upload both datasets and run record linking to see results.")
 
 if __name__ == "__main__":
+
     main()
