@@ -1,4 +1,3 @@
-# Cross-Source-Record-Linking-Solution
 # Cross-Source Record Linking System
 
 This application links records between two datasets that describe the same reality but use different formats and identifiers.
